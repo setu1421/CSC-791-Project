@@ -91,7 +91,7 @@ def main():
             x2 = Explain(best2, rest2)
             rule2,_= x2.xpln(data,best2,rest2)
             # if it was able to find a rule
-            if rule1 != -1 or rule2 != -1:
+            if rule1 != -1 and rule2 != -1:
                 # get the best rows of that rule
                 data1= Data(data,selects(rule1,data.rows))
                 data2 = Data(data,selects(rule2,data.rows))

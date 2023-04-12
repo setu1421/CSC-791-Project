@@ -200,3 +200,80 @@ class Data:
             d = d + dist1(col, t1.cells[col.at], t2.cells[col.at]) ** options["P"]
 
         return (d / len(cols)) ** (1 / options["P"])
+    
+
+
+    def dbscan(self, rows, eps, min_pts):
+        clusters = []
+        visited = set()
+        noise = set()
+        for i, row in enumerate(rows):
+            if i in visited:
+                continue
+            visited.add(i)
+            neighbors = []
+            for j, other_row in enumerate(rows):
+                if j != i and self.dist(row, other_row) <= eps:
+                    neighbors.append(j)
+            if len(neighbors) < min_pts:
+                noise.add(rows[i])
+            else:
+                cluster = set()
+                self.expand_cluster(rows, i, neighbors, cluster, visited, eps, min_pts)
+                clusters.append(list(cluster))
+        return clusters, list(noise)
+    
+    def expand_cluster(self, rows, i, neighbors, cluster, visited, eps, min_pts):
+        cluster.add(rows[i])
+        for j in neighbors:
+            if j not in visited:
+                visited.add(j)
+                other_neighbors = []
+                for k, other_row in enumerate(rows):
+                    if k != j and self.dist(other_row, rows[j]) <= eps:
+                        other_neighbors.append(k)
+                if len(other_neighbors) >= min_pts:
+                    neighbors.extend(other_neighbors)
+            if j not in cluster:
+                cluster.add(rows[j])
+
+
+   # This can be improved by only checking the centroid of the both clusters
+    def find_best_cluster(self, clusters):
+        best_cluster = None
+        bestIndex = -1
+        best_score = float('-inf')
+        evals = 0
+        for n, cluster in enumerate(clusters):
+            score, evals1 = self.compute_cluster_score(cluster)
+            evals += 1
+            if score > best_score:
+                best_cluster = cluster
+                best_score = score
+                best_index = n
+        rest = []
+        for n, cluster in enumerate(clusters):
+            if(n != best_index):
+                rest.extend(cluster)
+        return best_cluster, rest, evals
+    
+    # Score can be generated using the centroid stat
+    def compute_cluster_score(self, cluster):
+        score = 0
+        count = 0
+        for i, row1 in enumerate(cluster):
+            for j, row2 in enumerate(cluster):
+                if i < j:
+                    count += 1
+                    if self.better(row1, row2):
+                        score -= 1
+                    else:
+                        score += 1
+        return score, count
+
+    def sway_dbscan(self, eps= 0.25, min_pts=5):
+        #eps = g.the["eps"]
+        clusters, noise = self.dbscan(self.rows, eps, min_pts)
+        best, rest, evals = self.find_best_cluster(clusters)
+        rest = many(noise, 3 * len(best))
+        return Data.clone(self, best), Data.clone(self, rest) , evals            

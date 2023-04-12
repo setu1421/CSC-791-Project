@@ -22,7 +22,7 @@ OPTIONS:
   -I  --IMin        size of smallest cluster         = .5
   -M  --Max         numbers                          = 512
   -p  --P           dist coefficient                 = 2
-  -R  --Rest        how many of rest to sample       = 10
+  -R  --Rest        how many of rest to sample       = 3
   -r  --reuse       child splits reuse a parent pole = true
   -x  --Bootstrap   number of samples to bootstrap   = 512    
   -o  --Conf        confidence interval              = 0.05
@@ -79,7 +79,8 @@ def main():
             # read in the data
             data=Data(options["file"])
             # get the "all" and "sway" results
-            best,rest,evals_sway = data.sway()
+            #best,rest,evals_sway = data.sway()
+            best,rest,evals_sway = data.sway_dbscan()
             # get the "xpln" results
             x = Explain(best, rest)
             rule,_= x.xpln(data,best,rest)

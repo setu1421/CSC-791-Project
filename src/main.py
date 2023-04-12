@@ -65,12 +65,15 @@ def main():
         print(help)
     else:
 
-        results = {"all": [], "sway": [], "xpln": [], "top": []}
+        results = {"all": [], "sway1": [], "xpln1": [], "sway2": [], "xpln2": [], "top": []}
         comparisons = [[["all", "all"],None], 
-                       [["all", "sway"],None],  
-                       [["sway", "xpln"],None],  
-                       [["sway", "top"],None]]
-        n_evals = {"all": 0, "sway": 0, "xpln": 0, "top": 0}
+                       [["all", "sway1"],None],  
+                       [["all", "sway2"],None], 
+                       [["sway1", "sway2"],None],
+                       [["sway1", "xpln1"],None],    
+                       [["sway2", "xpln2"],None], 
+                       [["sway1", "top"],None]]
+        n_evals = {"all": 0, "sway1": 0, "xpln1": 0, "sway2": 0, "xpln2": 0, "top": 0}
 
         count = 0
         data=None
@@ -79,32 +82,40 @@ def main():
             # read in the data
             data=Data(options["file"])
             # get the "all" and "sway" results
-            #best,rest,evals_sway = data.sway()
-            best,rest,evals_sway = data.sway_dbscan()
-            # get the "xpln" results
-            x = Explain(best, rest)
-            rule,_= x.xpln(data,best,rest)
+            best1,rest1,evals_sway1 = data.sway()
+            best2,rest2,evals_sway2 = data.sway_dbscan()
+            # get the "xpln1" results
+            x1 = Explain(best1, rest1)
+            rule1,_= x1.xpln(data,best1,rest1)
+            # get the "xpln2" results
+            x2 = Explain(best2, rest2)
+            rule2,_= x2.xpln(data,best2,rest2)
             # if it was able to find a rule
-            if rule != -1:
+            if rule1 != -1 or rule2 != -1:
                 # get the best rows of that rule
-                data1= Data(data,selects(rule,data.rows))
+                data1= Data(data,selects(rule1,data.rows))
+                data2 = Data(data,selects(rule2,data.rows))
 
                 results['all'].append(data)
-                results['sway'].append(best)
-                results['xpln'].append(data1)
+                results['sway1'].append(best1)
+                results['sway2'].append(best2)
+                results['xpln1'].append(data1)
+                results['xpln2'].append(data2)
 
                 # get the "top" results by running the betters algorithm
-                top2,_ = data.betters(len(best.rows))
+                top2,_ = data.betters(len(best1.rows))
                 top = Data(data,top2)
                 results['top'].append(top)
 
                 # accumulate the number of evals
                 # for all: 0 evaluations 
                 n_evals["all"] += 0
-                n_evals["sway"] += evals_sway
+                n_evals["sway1"] += evals_sway1
+                n_evals["sway2"] += evals_sway2
                 # xpln uses the same number of evals since it just uses the data from
                 # sway to generate rules, no extra evals needed
-                n_evals["xpln"] += evals_sway
+                n_evals["xpln1"] += evals_sway1
+                n_evals["xpln2"] += evals_sway2
                 n_evals["top"] += len(data.rows)
 
                 # update comparisons

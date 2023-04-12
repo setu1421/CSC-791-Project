@@ -237,6 +237,7 @@ class Data:
             if j not in cluster:
                 cluster.add(rows[j])
     
+
     def find_best_dbscan_cluster(self, clusters):
         rest = []
         best_cluster = clusters[0]
@@ -261,7 +262,6 @@ class Data:
         return best_cluster, rest, evals        
 
 
-    
     def get_cluster_centroid(self, cluster, what: str = "mid"):
         def gap(r1, r2):
             return self.dist(r1, r2)

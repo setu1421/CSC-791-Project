@@ -236,44 +236,46 @@ class Data:
                     neighbors.extend(other_neighbors)
             if j not in cluster:
                 cluster.add(rows[j])
-
-
-   # This can be improved by only checking the centroid of the both clusters
-    def find_best_cluster(self, clusters):
-        best_cluster = None
-        bestIndex = -1
-        best_score = float('-inf')
-        evals = 0
-        for n, cluster in enumerate(clusters):
-            score, evals1 = self.compute_cluster_score(cluster)
-            evals += 1
-            if score > best_score:
-                best_cluster = cluster
-                best_score = score
-                best_index = n
-        rest = []
-        for n, cluster in enumerate(clusters):
-            if(n != best_index):
-                rest.extend(cluster)
-        return best_cluster, rest, evals
     
-    # Score can be generated using the centroid stat
-    def compute_cluster_score(self, cluster):
-        score = 0
-        count = 0
-        for i, row1 in enumerate(cluster):
-            for j, row2 in enumerate(cluster):
-                if i < j:
-                    count += 1
-                    if self.better(row1, row2):
-                        score -= 1
-                    else:
-                        score += 1
-        return score, count
+    def find_best_dbscan_cluster(self, clusters):
+        rest = []
+        best_cluster = clusters[0]
+        best_centroid = self.get_cluster_centroid(best_cluster)
+        evals = 0; isFirstEval = True
 
-    def sway_dbscan(self, eps= 0.25, min_pts=5):
+        for i in range(1, len(clusters)):
+            curr_centroid = self.get_cluster_centroid(clusters[i])
+
+            if self.better(curr_centroid, best_centroid):
+                rest.extend(best_cluster)
+                best_cluster = clusters[i]
+                best_centroid = curr_centroid
+                if isFirstEval:
+                   evals = evals + 2
+                   isFirstEval = False
+                else:
+                    evals = evals + 1    
+            else:
+                rest.extend(clusters[i])        
+
+        return best_cluster, rest, evals        
+
+
+    
+    def get_cluster_centroid(self, cluster, what: str = "mid"):
+        def gap(r1, r2):
+            return self.dist(r1, r2)
+        cluster_data = Data.clone(self, cluster)
+        C = Row([getattr(col, what)() for col in cluster_data.cols.all])
+
+        sorted_cluster_data = sorted([{"row": r, "d": gap(r, C)} for r in cluster], key=lambda x: x["d"])
+
+        return sorted_cluster_data[0]['row']
+
+
+    def sway_dbscan(self, eps= 0.3, min_pts=5):
         #eps = g.the["eps"]
         clusters, noise = self.dbscan(self.rows, eps, min_pts)
-        best, rest, evals = self.find_best_cluster(clusters)
+        best, rest, evals = self.find_best_dbscan_cluster(clusters)
         rest = many(noise, 3 * len(best))
         return Data.clone(self, best), Data.clone(self, rest) , evals            

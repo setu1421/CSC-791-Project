@@ -27,7 +27,7 @@ OPTIONS:
   -x  --Bootstrap   number of samples to bootstrap   = 512    
   -o  --Conf        confidence interval              = 0.05
   -f  --file        file to generate table of        = etc/data/auto2.csv
-  -n  --Niter       number of iterations to run      = 2
+  -n  --Niter       number of iterations to run      = 20
   -w  --budget      budget of sampling               = 2
 """
 
@@ -171,7 +171,7 @@ def main():
                 current_df = saveToCSV(table, headers, options["budget"], count)
                 final_df = pd.concat([final_df, current_df], ignore_index = True)
                 file_name = options["file"].strip().split("/")[-1].split(".")[0]
-                final_df.to_csv("etc/budget/out/" + file_name + "/" + file_name + "_B" + str(options["budget"]) + ".csv", index = False)
+                final_df.to_csv("etc/out/budget/" + file_name + "/" + file_name + "_B" + str(options["budget"]) + ".csv", index = False)
 
                 # generates the =/!= table and save to 
                 table=[]

@@ -94,7 +94,12 @@ class Data:
 
     def sway(self, cols=None):
         def worker(rows, worse, evals0=None, above=None):
-            if len(rows) <= len(self.rows) ** options["IMin"]:
+            # we can set the cut off area which one is maximum between options["budget"] or sqrt(N)
+            cut_of_cluster = max(2 * options["budget"], len(self.rows) ** options["IMin"])
+            #cut_of_cluster = len(self.rows) ** options["IMin"]
+            if len(rows) <= cut_of_cluster:
+                # choose best B items here
+                rows,_ = Data(self, rows).betters(options["budget"])
                 return rows, many(worse, options["Rest"] * len(rows)), evals0
 
             l, r, A, B, c, evals = self.half(rows, cols, above)
@@ -128,7 +133,7 @@ class Data:
 
     def betters(self, n=None):
         tmp = sorted(self.rows, key=cmp_to_key(lambda row1, row2: -1 if self.better(row1, row2) else 1))
-        return tmp[1:n], tmp[n+1:] if n is not None else tmp
+        return tmp[0:n], tmp[n+1:] if n is not None else tmp
 
     def half(self, rows=None, cols=None, above=None):
         """
@@ -272,10 +277,12 @@ class Data:
 
         return sorted_cluster_data[0]['row']
 
-
-    def sway_dbscan(self, eps= 0.3, min_pts=5):
-        #eps = g.the["eps"]
+    # min_pts should be the budget
+    def sway_dbscan(self, eps= 0.27, min_pts = 5):
+        min_pts = options["budget"]
         clusters, noise = self.dbscan(self.rows, eps, min_pts)
         best, rest, evals = self.find_best_dbscan_cluster(clusters)
+        # select items according to budget
+        best,_ = Data.clone(self, best).betters(options["budget"])
         rest = many(rest, options["Rest"] * len(best))
         return Data.clone(self, best), Data.clone(self, rest) , evals            

@@ -27,11 +27,11 @@ OPTIONS:
   -x  --Bootstrap   number of samples to bootstrap   = 512    
   -o  --Conf        confidence interval              = 0.05
   -f  --file        file to generate table of        = etc/data/auto2.csv
-  -n  --Niter       number of iterations to run      = 2
-  -w  --budget      budget of sampling               = 5
+  -n  --Niter       number of iterations to run      = 20
+  -w  --budget      budget of sampling               = 2
 """
 
-def get_stats(data_array):
+def get_stats(data_array, iter = None):
     # gets the average stats, given the data array objects
     res = {}
     # accumulate the stats
@@ -43,7 +43,7 @@ def get_stats(data_array):
 
     # right now, the stats are summed. change it to average
     for k,v in res.items():
-        res[k] /= options["Niter"]
+        res[k] /= (options["Niter"] if iter is None else iter)
     return res
 
 
@@ -157,28 +157,32 @@ def main():
                 # for each algorithm's results
                 for k,v in results.items():
                     # set the row equal to the average stats
-                    stats = get_stats(v)
+                    stats = get_stats(v, count)
                     stats_list = [k] + [stats[y] for y in headers]
                     # adds on the average number of evals
                     stats_list += [n_evals[k]/options["Niter"]]
                     
                     table.append(stats_list)
                 
+                print("---------------Start of Run:", count, ", Budget:", options["budget"], " -------------")
+                print()
                 print(tabulate(table, headers=headers+["Avg evals"],numalign="right"))
                 print()
-                current_df = saveToCSV(table, headers, 5, count)
+                current_df = saveToCSV(table, headers, options["budget"], count)
                 final_df = pd.concat([final_df, current_df], ignore_index = True)
                 file_name = options["file"].strip().split("/")[-1].split(".")[0]
                 final_df.to_csv("etc/out/budget/" + file_name + "_B" + str(options["budget"]) + ".csv", index = False)
 
-        
-        # generates the =/!= table
-        table=[]
-        # for each comparison of the algorithms
-        #    append the = / !=
-        for [base, diff], result in comparisons:
-            table.append([f"{base} to {diff}"] + result)
-        print(tabulate(table, headers=headers,numalign="right"))
+                # generates the =/!= table and save to 
+                table=[]
+                # for each comparison of the algorithms
+                #    append the = / !=
+                for [base, diff], result in comparisons:
+                    table.append([f"{base} to {diff}"] + result)
+                print(tabulate(table, headers=headers,numalign="right"))
+                print("---------------End of Run:", count, ", Budget:", options["budget"], " -------------")
+                print()
+
 
 
 main()

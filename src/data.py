@@ -284,5 +284,9 @@ class Data:
         best, rest, evals = self.find_best_dbscan_cluster(clusters)
         # select items according to budget
         best,_ = Data.clone(self, best).betters(options["budget"])
-        rest = many(rest, options["Rest"] * len(best))
+        if(len(rest) < options["Rest"] * len(best)):
+            rest = many(noise, options["Rest"] * len(best))
+        else:
+            rest = many(rest, options["Rest"] * len(best))
+
         return Data.clone(self, best), Data.clone(self, rest) , evals            

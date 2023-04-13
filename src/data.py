@@ -277,5 +277,5 @@ class Data:
         #eps = g.the["eps"]
         clusters, noise = self.dbscan(self.rows, eps, min_pts)
         best, rest, evals = self.find_best_dbscan_cluster(clusters)
-        rest = many(noise, 3 * len(best))
+        rest = many(rest, options["Rest"] * len(best))
         return Data.clone(self, best), Data.clone(self, rest) , evals            

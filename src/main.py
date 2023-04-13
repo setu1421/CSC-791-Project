@@ -1,4 +1,4 @@
-
+import pandas as pd
 from explain import Explain, selects
 from data import Data
 from options import options
@@ -27,8 +27,8 @@ OPTIONS:
   -x  --Bootstrap   number of samples to bootstrap   = 512    
   -o  --Conf        confidence interval              = 0.05
   -f  --file        file to generate table of        = etc/data/auto2.csv
-  -n  --Niter       number of iterations to run      = 20
-  -w  --wColor      output with color                = false
+  -n  --Niter       number of iterations to run      = 2
+  -w  --budget      budget of sampling               = 5
 """
 
 def get_stats(data_array):
@@ -45,6 +45,16 @@ def get_stats(data_array):
     for k,v in res.items():
         res[k] /= options["Niter"]
     return res
+
+
+def saveToCSV(table, headers, budget, run):
+    data_headers = ["type"] + headers + ["Avg evals"]
+    data_df = pd.DataFrame(table, columns = data_headers)
+    data_df["budget"] = budget
+    data_df["run"] = run
+    
+    return data_df
+    
 
 def main():
     """
@@ -77,6 +87,8 @@ def main():
 
         count = 0
         data=None
+        final_df = pd.DataFrame()
+
         # do a while loop because sometimes explain can return -1
         while count < options["Niter"]:
             # read in the data
@@ -139,30 +151,25 @@ def main():
                                 comparisons[i][1][k] = "≠"
                 count += 1
 
-        # generate the stats table
-        headers = [y.txt for y in data.cols.y]
-        table = []
-        # for each algorithm's results
-        for k,v in results.items():
-            # set the row equal to the average stats
-            stats = get_stats(v)
-            stats_list = [k] + [stats[y] for y in headers]
-            # adds on the average number of evals
-            stats_list += [n_evals[k]/options["Niter"]]
-            
-            table.append(stats_list)
-        
-        if options["wColor"]:
-            # updates stats table to have the best result per column highlighted
-            for i in range(len(headers)):
-                # get the value of the 'y[i]' column for each algorithm
-                header_vals = [v[i+1] for v in table]
-                # if the 'y' value is minimizing, use min else use max
-                fun = max if headers[i][-1] == "+" else min
-                # change the table to have green text if it is the "best" for that column
-                table[header_vals.index(fun(header_vals))][i+1] = '\033[92m' + str(table[header_vals.index(fun(header_vals))][i+1]) + '\033[0m'
-        print(tabulate(table, headers=headers+["Avg evals"],numalign="right"))
-        print()
+                # generate the stats table
+                headers = [y.txt for y in data.cols.y]
+                table = []
+                # for each algorithm's results
+                for k,v in results.items():
+                    # set the row equal to the average stats
+                    stats = get_stats(v)
+                    stats_list = [k] + [stats[y] for y in headers]
+                    # adds on the average number of evals
+                    stats_list += [n_evals[k]/options["Niter"]]
+                    
+                    table.append(stats_list)
+                
+                print(tabulate(table, headers=headers+["Avg evals"],numalign="right"))
+                print()
+                current_df = saveToCSV(table, headers, 5, count)
+                final_df = pd.concat([final_df, current_df], ignore_index = True)
+                file_name = options["file"].strip().split("/")[-1].split(".")[0]
+                final_df.to_csv("etc/out/budget/" + file_name + "_B" + str(options["budget"]) + ".csv", index = False)
 
         
         # generates the =/!= table

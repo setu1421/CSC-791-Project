@@ -1,0 +1,45 @@
+---------------Start of Run: 20 , Budget: 5  -------------
+
+         NUMBERITERATIONS-    TIMETOSOLUTION-    Avg evals
+-----  -------------------  -----------------  -----------
+all                   6.75            134.707            0
+sway1                  5.4            122.855           10
+xpln1                  6.6            137.734           10
+sway2                 5.65            111.575          3.7
+xpln2                 5.35            105.856          3.7
+top                    3.9             68.306         1000
+
+                NUMBERITERATIONS-    TIMETOSOLUTION-
+--------------  -------------------  -----------------
+all to all      =                    =
+all to sway1    ≠                    ≠
+all to sway2    ≠                    ≠
+sway1 to sway2  ≠                    ≠
+sway1 to xpln1  ≠                    ≠
+sway2 to xpln2  ≠                    ≠
+sway1 to top    ≠                    ≠
+sway2 to top    ≠                    ≠
+---------------End of Run: 20 , Budget: 5  -------------
+
+---------------Start of Run: 20 , Budget: 10  -------------
+
+         NUMBERITERATIONS-    TIMETOSOLUTION-    Avg evals
+-----  -------------------  -----------------  -----------
+all                   6.85            133.995            0
+sway1                  5.5            119.893           10
+xpln1                 5.55            124.613           10
+sway2                 5.75            104.387         3.15
+xpln2                  5.4            110.743         3.15
+top                      4            75.1225         1000
+
+                NUMBERITERATIONS-    TIMETOSOLUTION-
+--------------  -------------------  -----------------
+all to all      =                    =
+all to sway1    ≠                    ≠
+all to sway2    ≠                    ≠
+sway1 to sway2  ≠                    ≠
+sway1 to xpln1  ≠                    ≠
+sway2 to xpln2  ≠                    ≠
+sway1 to top    ≠                    ≠
+sway2 to top    ≠                    ≠
+---------------End of Run: 20 , Budget: 10  -------------

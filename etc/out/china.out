@@ -1,0 +1,137 @@
+---------------Start of Run: 20 , Budget: 2  -------------
+
+         N_effort-    Avg evals
+-----  -----------  -----------
+all           2098            0
+sway1       371.25            6
+xpln1       974.75            6
+sway2      1294.85            2
+xpln2      2104.45            2
+top             31          499
+
+                N_effort-
+--------------  -----------
+all to all      =
+all to sway1    ≠
+all to sway2    ≠
+sway1 to sway2  ≠
+sway1 to xpln1  ≠
+sway2 to xpln2  ≠
+sway1 to top    ≠
+sway2 to top    ≠
+---------------End of Run: 20 , Budget: 2  -------------
+
+---------------Start of Run: 20 , Budget: 4  -------------
+
+         N_effort-    Avg evals
+-----  -----------  -----------
+all           2098            0
+sway1       411.85            6
+xpln1       1033.4            6
+sway2       442.35            2
+xpln2       931.35            2
+top             96          499
+
+                N_effort-
+--------------  -----------
+all to all      =
+all to sway1    ≠
+all to sway2    ≠
+sway1 to sway2  ≠
+sway1 to xpln1  ≠
+sway2 to xpln2  ≠
+sway1 to top    ≠
+sway2 to top    ≠
+---------------End of Run: 20 , Budget: 4  -------------
+
+---------------Start of Run: 20 , Budget: 6  -------------
+
+         N_effort-    Avg evals
+-----  -----------  -----------
+all           2098            0
+sway1      628.526            6
+xpln1      861.947            6
+sway2      463.895            2
+xpln2      906.316            2
+top            107          499
+
+                N_effort-
+--------------  -----------
+all to all      ≠
+all to sway1    ≠
+all to sway2    ≠
+sway1 to sway2  ≠
+sway1 to xpln1  ≠
+sway2 to xpln2  ≠
+sway1 to top    ≠
+sway2 to top    ≠
+---------------End of Run: 20 , Budget: 6  -------------
+
+---------------Start of Run: 20 , Budget: 8  -------------
+
+         N_effort-    Avg evals
+-----  -----------  -----------
+all           2098            0
+sway1       927.65            6
+xpln1      1342.25            6
+sway2       445.05            2
+xpln2       666.35            2
+top            114          499
+
+                N_effort-
+--------------  -----------
+all to all      =
+all to sway1    ≠
+all to sway2    ≠
+sway1 to sway2  ≠
+sway1 to xpln1  ≠
+sway2 to xpln2  ≠
+sway1 to top    ≠
+sway2 to top    ≠
+---------------End of Run: 20 , Budget: 8  -------------
+
+---------------Start of Run: 20 , Budget: 10  -------------
+
+         N_effort-    Avg evals
+-----  -----------  -----------
+all           2098            0
+sway1        683.1            6
+xpln1      1405.05            6
+sway2       476.85            0
+xpln2       609.65            0
+top            140          499
+
+                N_effort-
+--------------  -----------
+all to all      =
+all to sway1    ≠
+all to sway2    ≠
+sway1 to sway2  ≠
+sway1 to xpln1  ≠
+sway2 to xpln2  ≠
+sway1 to top    ≠
+sway2 to top    ≠
+---------------End of Run: 20 , Budget: 10  -------------
+
+---------------Start of Run: 10 , Best: 1  -------------
+
+         N_effort-    Avg evals
+-----  -----------  -----------
+all           2098            0
+sway1        320.5            6
+xpln1          938            6
+sway2          140            0
+xpln2        759.9            0
+top             31          499
+
+                N_effort-
+--------------  -----------
+all to all      =
+all to sway1    ≠
+all to sway2    ≠
+sway1 to sway2  ≠
+sway1 to xpln1  ≠
+sway2 to xpln2  ≠
+sway1 to top    ≠
+sway2 to top    ≠
+---------------End of Run: 10 , Best: 1  -------------

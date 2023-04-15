@@ -1,0 +1,137 @@
+---------------Start of Run: 20 , Budget: 2  -------------
+
+          Lbs-    Acc+    Mpg+    Avg evals
+-----  -------  ------  ------  -----------
+all       2800    15.5      20            0
+sway1  2032.95   15.44      30            6
+xpln1  2226.85   15.96      29            6
+sway2   2231.1  16.685    34.5        12.05
+xpln2   2651.3  15.905      25        12.05
+top       2130    23.7      40          398
+
+                Lbs-    Acc+    Mpg+
+--------------  ------  ------  ------
+all to all      =       =       =
+all to sway1    ≠       ≠       ≠
+all to sway2    ≠       ≠       ≠
+sway1 to sway2  ≠       ≠       ≠
+sway1 to xpln1  ≠       ≠       ≠
+sway2 to xpln2  ≠       ≠       ≠
+sway1 to top    ≠       ≠       ≠
+sway2 to top    ≠       ≠       ≠
+---------------End of Run: 20 , Budget: 2  -------------
+
+---------------Start of Run: 20 , Budget: 4  -------------
+
+          Lbs-    Acc+    Mpg+    Avg evals
+-----  -------  ------  ------  -----------
+all       2800    15.5      20            0
+sway1   2038.4   15.94      34            6
+xpln1  2180.05  16.375    29.5            6
+sway2  2057.05   16.24    37.5        10.45
+xpln2  2891.25   15.43      22        10.45
+top       2110    21.5      40          398
+
+                Lbs-    Acc+    Mpg+
+--------------  ------  ------  ------
+all to all      ≠       =       =
+all to sway1    ≠       ≠       ≠
+all to sway2    ≠       ≠       ≠
+sway1 to sway2  ≠       ≠       ≠
+sway1 to xpln1  ≠       ≠       ≠
+sway2 to xpln2  ≠       ≠       ≠
+sway1 to top    ≠       ≠       ≠
+sway2 to top    ≠       ≠       ≠
+---------------End of Run: 20 , Budget: 4  -------------
+
+---------------Start of Run: 20 , Budget: 6  -------------
+
+          Lbs-    Acc+    Mpg+    Avg evals
+-----  -------  ------  ------  -----------
+all       2800    15.5      20            0
+sway1   2070.9  16.345      30            6
+xpln1   2288.7   15.89    28.5            6
+sway2  2058.85  16.095    36.5         7.35
+xpln2  2640.15  15.815    26.5         7.35
+top       2085    21.5      40          398
+
+                Lbs-    Acc+    Mpg+
+--------------  ------  ------  ------
+all to all      =       =       =
+all to sway1    ≠       ≠       ≠
+all to sway2    ≠       ≠       ≠
+sway1 to sway2  ≠       ≠       ≠
+sway1 to xpln1  ≠       ≠       ≠
+sway2 to xpln2  ≠       ≠       ≠
+sway1 to top    ≠       ≠       ≠
+sway2 to top    ≠       ≠       ≠
+---------------End of Run: 20 , Budget: 6  -------------
+
+---------------Start of Run: 20 , Budget: 8  -------------
+
+          Lbs-    Acc+    Mpg+    Avg evals
+-----  -------  ------  ------  -----------
+all       2800    15.5      20            0
+sway1  2152.85  15.875      32            6
+xpln1   2244.6  16.025    29.5            6
+sway2  2044.95  15.615    35.5          3.9
+xpln2     2158  16.055      29          3.9
+top       1985    19.4      40          398
+
+                Lbs-    Acc+    Mpg+
+--------------  ------  ------  ------
+all to all      =       =       =
+all to sway1    ≠       ≠       ≠
+all to sway2    ≠       ≠       ≠
+sway1 to sway2  ≠       ≠       ≠
+sway1 to xpln1  ≠       ≠       ≠
+sway2 to xpln2  ≠       ≠       ≠
+sway1 to top    ≠       ≠       ≠
+sway2 to top    ≠       ≠       ≠
+---------------End of Run: 20 , Budget: 8  -------------
+
+---------------Start of Run: 20 , Budget: 10  -------------
+
+          Lbs-    Acc+    Mpg+    Avg evals
+-----  -------  ------  ------  -----------
+all       2800    15.5      20            0
+sway1  2163.95  16.485    32.5            6
+xpln1   2261.7   16.05      30            6
+sway2  2134.45   16.57      37            3
+xpln2  2659.25   15.63    24.5            3
+top       1985    19.2      40          398
+
+                Lbs-    Acc+    Mpg+
+--------------  ------  ------  ------
+all to all      =       =       =
+all to sway1    ≠       ≠       ≠
+all to sway2    ≠       ≠       ≠
+sway1 to sway2  ≠       ≠       ≠
+sway1 to xpln1  ≠       ≠       ≠
+sway2 to xpln2  ≠       ≠       ≠
+sway1 to top    ≠       ≠       ≠
+sway2 to top    ≠       ≠       ≠
+---------------End of Run: 20 , Budget: 10  -------------
+
+---------------Start of Run: 20 , Best: 1  -------------
+
+          Lbs-    Acc+    Mpg+    Avg evals
+-----  -------  ------  ------  -----------
+all       2800    15.5      20            0
+sway1  1900.55  19.115    37.5            6
+xpln1   2169.8  16.745    29.5            6
+sway2     2110    17.9      50            3
+xpln2     2155    16.4      30            3
+top       2130    24.6      40          398
+
+                Lbs-    Acc+    Mpg+
+--------------  ------  ------  ------
+all to all      =       =       =
+all to sway1    ≠       ≠       ≠
+all to sway2    ≠       ≠       ≠
+sway1 to sway2  ≠       ≠       ≠
+sway1 to xpln1  ≠       ≠       ≠
+sway2 to xpln2  ≠       ≠       ≠
+sway1 to top    ≠       ≠       ≠
+sway2 to top    ≠       ≠       ≠
+---------------End of Run: 20 , Best: 1  -------------

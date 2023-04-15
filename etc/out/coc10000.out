@@ -1,0 +1,91 @@
+---------------Start of Run: 20 , Budget: 5  -------------
+
+          Loc+      Risk-    Effort-    Avg evals
+-----  -------  ---------  ---------  -----------
+all    1000.76    5.17647    19706.8            0
+sway1  1034.94    6.17647    20982.2            8
+xpln1  982.588    6.41176    20793.6            8
+sway2  888.471    5.41176    20786.8            0
+xpln2  1041.12    4.70588    20684.9            0
+top    1967.82  0.0588235    19728.7         1000
+
+                Loc+    Risk-    Effort-
+--------------  ------  -------  ---------
+all to all      =       =        =
+all to sway1    ≠       ≠        ≠
+all to sway2    ≠       ≠        ≠
+sway1 to sway2  ≠       ≠        ≠
+sway1 to xpln1  ≠       ≠        ≠
+sway2 to xpln2  ≠       ≠        ≠
+sway1 to top    ≠       ≠        ≠
+sway2 to top    ≠       ≠        ≠
+---------------End of Run: 20 , Budget: 5  -------------
+
+---------------Start of Run: 20 , Budget: 10  -------------
+
+          Loc+     Risk-    Effort-    Avg evals
+-----  -------  --------  ---------  -----------
+all       1011   5.05882    19544.4            0
+sway1  932.706   3.05882    14424.3            8
+xpln1  1033.12   4.58824    18918.9            8
+sway2  954.235   4.70588    19176.3            0
+xpln2  1011.76   6.11765    20481.9            0
+top    1943.35  0.176471    19295.2         1000
+
+                Loc+    Risk-    Effort-
+--------------  ------  -------  ---------
+all to all      =       =        ≠
+all to sway1    ≠       ≠        ≠
+all to sway2    ≠       ≠        ≠
+sway1 to sway2  ≠       ≠        ≠
+sway1 to xpln1  ≠       ≠        ≠
+sway2 to xpln2  ≠       ≠        ≠
+sway1 to top    ≠       ≠        ≠
+sway2 to top    ≠       ≠        ≠
+---------------End of Run: 20 , Budget: 10  -------------
+
+---------------Start of Run: 20 , Best: 20  -------------
+
+          Loc+     Risk-    Effort-    Avg evals
+-----  -------  --------  ---------  -----------
+all    1010.53   5.13333    19916.6            0
+sway1  1121.07   3.86667    17550.1            8
+xpln1  1010.13   5.33333    20784.7            8
+sway2  991.533   4.86667    18928.2            0
+xpln2  1033.13   5.73333    20013.5            0
+top    1912.93  0.333333    20398.5         1000
+
+                Loc+    Risk-    Effort-
+--------------  ------  -------  ---------
+all to all      =       =        =
+all to sway1    ≠       ≠        ≠
+all to sway2    =       =        ≠
+sway1 to sway2  ≠       ≠        ≠
+sway1 to xpln1  ≠       ≠        ≠
+sway2 to xpln2  ≠       ≠        ≠
+sway1 to top    ≠       ≠        ≠
+sway2 to top    ≠       ≠        ≠
+---------------End of Run: 20 , Best: 20  -------------
+
+---------------Start of Run: 20 , Best: 1  -------------
+
+          Loc+    Risk-    Effort-    Avg evals
+-----  -------  -------  ---------  -----------
+all    1006.06   5.1875    20053.3            0
+sway1  1818.94   0.0625    17231.6            8
+xpln1     1018   4.4375    18464.5            8
+sway2  1974.19   0.3125    13607.5            0
+xpln2  1008.44    5.375    20233.1            0
+top    1973.19   0.3125    13025.3         1000
+
+                Loc+    Risk-    Effort-
+--------------  ------  -------  ---------
+all to all      =       =        =
+all to sway1    ≠       ≠        ≠
+all to sway2    ≠       ≠        ≠
+sway1 to sway2  ≠       ≠        ≠
+sway1 to xpln1  ≠       ≠        ≠
+sway2 to xpln2  ≠       ≠        ≠
+sway1 to top    ≠       ≠        ≠
+sway2 to top    ≠       ≠        ≠
+---------------End of Run: 20 , Best: 1  -------------

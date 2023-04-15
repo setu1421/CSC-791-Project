@@ -1,0 +1,92 @@
+---------------Start of Run: 20 , Budget: 5  -------------
+
+         Cost-    Completion+     Idle-    Avg evals
+-----  -------  -------------  --------  -----------
+all    330.262       0.896667     0.245            0
+sway1  309.475          0.915  0.231667            8
+xpln1  307.973       0.898333      0.29            8
+sway2  319.558       0.858333  0.176667            1
+xpln2  349.183       0.896667  0.233333            1
+top     148.19       0.976667         0         1000
+
+                Cost-    Completion+    Idle-
+--------------  -------  -------------  -------
+all to all      =        =              =
+all to sway1    ≠        ≠              =
+all to sway2    ≠        ≠              ≠
+sway1 to sway2  ≠        ≠              ≠
+sway1 to xpln1  ≠        ≠              ≠
+sway2 to xpln2  ≠        ≠              ≠
+sway1 to top    ≠        ≠              ≠
+sway2 to top    ≠        ≠              ≠
+---------------End of Run: 20 , Budget: 5  -------------
+
+
+---------------Start of Run: 20 , Budget: 10  -------------
+
+         Cost-    Completion+     Idle-    Avg evals
+-----  -------  -------------  --------  -----------
+all    329.093            0.9      0.23            0
+sway1  259.553           0.87  0.136667            8
+xpln1  318.607       0.903333  0.236667            8
+sway2  364.593           0.89      0.19            2
+xpln2   321.43       0.893333  0.233333            2
+top     149.29           0.97         0         1000
+
+                Cost-    Completion+    Idle-
+--------------  -------  -------------  -------
+all to all      =        =              =
+all to sway1    ≠        =              =
+all to sway2    =        =              =
+sway1 to sway2  ≠        ≠              ≠
+sway1 to xpln1  ≠        ≠              ≠
+sway2 to xpln2  ≠        =              =
+sway1 to top    ≠        ≠              ≠
+sway2 to top    ≠        ≠              ≠
+---------------End of Run: 20 , Budget: 10  -------------
+
+---------------Start of Run: 20 , Budget: 20  -------------
+
+         Cost-    Completion+    Idle-    Avg evals
+-----  -------  -------------  -------  -----------
+all    333.042            0.9    0.235            0
+sway1  319.583          0.905     0.23            8
+xpln1  351.492       0.906667     0.24            8
+sway2  368.832       0.878333     0.16          1.5
+xpln2  335.475       0.898333     0.24          1.5
+top    151.955       0.903333        0         1000
+
+                Cost-    Completion+    Idle-
+--------------  -------  -------------  -------
+all to all      =        =              =
+all to sway1    ≠        ≠              =
+all to sway2    ≠        ≠              ≠
+sway1 to sway2  ≠        ≠              ≠
+sway1 to xpln1  ≠        ≠              =
+sway2 to xpln2  ≠        ≠              ≠
+sway1 to top    ≠        ≠              ≠
+sway2 to top    ≠        ≠              ≠
+---------------End of Run: 20 , Budget: 20  -------------
+
+---------------Start of Run: 20 , Best: 1  -------------
+
+         Cost-    Completion+      Idle-    Avg evals
+-----  -------  -------------  ---------  -----------
+all    323.162       0.899091   0.239091            0
+sway1  128.149       0.930909  0.0445455            8
+xpln1  346.679       0.897273   0.248182            8
+sway2   136.03       0.959091  0.0218182     0.909091
+xpln2   327.15       0.893636   0.251818     0.909091
+top    115.945       0.990909          0         1000
+
+                Cost-    Completion+    Idle-
+--------------  -------  -------------  -------
+all to all      =        =              =
+all to sway1    ≠        ≠              ≠
+all to sway2    ≠        ≠              ≠
+sway1 to sway2  ≠        ≠              ≠
+sway1 to xpln1  ≠        ≠              ≠
+sway2 to xpln2  ≠        ≠              ≠
+sway1 to top    ≠        ≠              ≠
+sway2 to top    ≠        ≠              ≠
+---------------End of Run: 11 , Best: 1  -------------

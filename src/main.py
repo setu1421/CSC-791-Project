@@ -22,13 +22,14 @@ OPTIONS:
   -I  --IMin        size of smallest cluster         = .5
   -M  --Max         numbers                          = 512
   -p  --P           dist coefficient                 = 2
-  -R  --Rest        how many of rest to sample       = 3
+  -R  --Rest        how many of rest to sample       = 10
   -r  --reuse       child splits reuse a parent pole = true
   -x  --Bootstrap   number of samples to bootstrap   = 512    
   -o  --Conf        confidence interval              = 0.05
-  -f  --file        file to generate table of        = etc/data/auto2.csv
+  -f  --file        file to generate table of        = etc/data/SSM.csv
   -n  --Niter       number of iterations to run      = 20
-  -w  --budget      budget of sampling               = 2
+  -w  --budget      budget of sampling               = 20
+  -r  --best        choose the best row of sway      = false     
 """
 
 def get_stats(data_array, iter = None):
@@ -82,10 +83,11 @@ def main():
                        [["sway1", "sway2"],None],
                        [["sway1", "xpln1"],None],    
                        [["sway2", "xpln2"],None], 
-                       [["sway1", "top"],None]]
+                       [["sway1", "top"],None], 
+                       [["sway2", "top"],None]]
         n_evals = {"all": 0, "sway1": 0, "xpln1": 0, "sway2": 0, "xpln2": 0, "top": 0}
 
-        count = 0
+        count = 0; act_count = 0
         data=None
         final_df = pd.DataFrame()
 
@@ -141,37 +143,40 @@ def main():
                         # if not already marked as false
                         if comparisons[i][1][k] == "=":
                             # check if it is false
-                            base_y, diff_y = results[base][count].cols.y[k],results[diff][count].cols.y[k]
+                            base_y, diff_y = results[base][act_count].cols.y[k],results[diff][act_count].cols.y[k]
                             equals = bootstrap(base_y.has(), diff_y.has()) and cliffsDelta(base_y.has(), diff_y.has())
                             if not equals:
                                 if i == 0:
                                     # should never fail for all to all, unless sample size is large
                                     print("WARNING: all to all {} {} {}".format(i, k, "false"))
-                                    print(f"all to all comparison failed for {results[base][count].cols.y[k].txt}")
+                                    print(f"all to all comparison failed for {results[base][act_count].cols.y[k].txt}")
                                 comparisons[i][1][k] = "≠"
-                count += 1
 
+                act_count = act_count + 1
                 # generate the stats table
                 headers = [y.txt for y in data.cols.y]
                 table = []
                 # for each algorithm's results
                 for k,v in results.items():
                     # set the row equal to the average stats
-                    stats = get_stats(v, count)
+                    stats = get_stats(v, act_count)
                     stats_list = [k] + [stats[y] for y in headers]
                     # adds on the average number of evals
-                    stats_list += [n_evals[k]/options["Niter"]]
+                    stats_list += [n_evals[k]/act_count]
                     
                     table.append(stats_list)
                 
-                print("---------------Start of Run:", count, ", Budget:", options["budget"], " -------------")
+                print("---------------Start of Run:", (act_count), ", Budget:", options["budget"], " -------------")
                 print()
                 print(tabulate(table, headers=headers+["Avg evals"],numalign="right"))
                 print()
-                current_df = saveToCSV(table, headers, options["budget"], count)
+                current_df = saveToCSV(table, headers, options["budget"], act_count)
                 final_df = pd.concat([final_df, current_df], ignore_index = True)
                 file_name = options["file"].strip().split("/")[-1].split(".")[0]
-                final_df.to_csv("etc/out/budget/" + file_name + "/" + file_name + "_B" + str(options["budget"]) + ".csv", index = False)
+                if options["best"]:
+                    final_df.to_csv("etc/out/budget/" + file_name + "/" + file_name + "_best.csv", index = False)
+                else:
+                    final_df.to_csv("etc/out/budget/" + file_name + "/" + file_name + "_B" + str(options["budget"]) + ".csv", index = False)    
 
                 # generates the =/!= table and save to 
                 table=[]
@@ -180,8 +185,10 @@ def main():
                 for [base, diff], result in comparisons:
                     table.append([f"{base} to {diff}"] + result)
                 print(tabulate(table, headers=headers,numalign="right"))
-                print("---------------End of Run:", count, ", Budget:", options["budget"], " -------------")
+                print("---------------End of Run:", (act_count), ", Budget:", options["budget"], " -------------")
                 print()
+
+            count += 1    
 
 
 

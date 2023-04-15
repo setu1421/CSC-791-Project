@@ -98,8 +98,11 @@ class Data:
             cut_of_cluster = max(2 * options["budget"], len(self.rows) ** options["IMin"])
             #cut_of_cluster = len(self.rows) ** options["IMin"]
             if len(rows) <= cut_of_cluster:
-                # choose best B items here
-                rows,_ = Data(self, rows).betters(options["budget"])
+                # choose the best item or pick random budget (B) items
+                if options["best"]:
+                    rows,_ = Data(self, rows).betters(1)
+                else:
+                    rows = many(rows, options["budget"])    
                 return rows, many(worse, options["Rest"] * len(rows)), evals0
 
             l, r, A, B, c, evals = self.half(rows, cols, above)
@@ -271,21 +274,35 @@ class Data:
         def gap(r1, r2):
             return self.dist(r1, r2)
         cluster_data = Data.clone(self, cluster)
-        C = Row([getattr(col, what)() for col in cluster_data.cols.all])
+        centroid = []
+        for col in cluster_data.cols.all:
+            if col not in cluster_data.cols.x:
+                centroid.append(0)
+            else:
+                centroid.append(getattr(col, what)())    
+
+        C = Row(centroid)        
+
 
         sorted_cluster_data = sorted([{"row": r, "d": gap(r, C)} for r in cluster], key=lambda x: x["d"])
 
         return sorted_cluster_data[0]['row']
 
     # min_pts should be the budget
-    def sway_dbscan(self, eps= 0.27, min_pts = 5):
+    def sway_dbscan(self, eps= 0.25, min_pts = 5):
         min_pts = options["budget"]
+        self.rows = many(self.rows, 1000)
         clusters, noise = self.dbscan(self.rows, eps, min_pts)
         best, rest, evals = self.find_best_dbscan_cluster(clusters)
-        # select items according to budget
-        best,_ = Data.clone(self, best).betters(options["budget"])
-        if(len(rest) < options["Rest"] * len(best)):
-            rest = many(noise, options["Rest"] * len(best))
+        #choose the best item or pick random budget (B) items
+        if options["best"]:
+            best,_ = Data.clone(self, best).betters(1)
+        else:
+            best = many(best, options["budget"])    
+
+        if len(rest) < options["Rest"] * len(best):
+            tmp = many(noise, (options["Rest"] * len(best)) - len(rest))
+            rest.extend(tmp)
         else:
             rest = many(rest, options["Rest"] * len(best))
 

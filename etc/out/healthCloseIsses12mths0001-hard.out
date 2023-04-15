@@ -1,0 +1,91 @@
+---------------Start of Run: 20 , Budget: 5  -------------
+
+          MRE-    ACC+    PRED40+    Avg evals
+-----  -------  ------  ---------  -----------
+all     75.045  7.1485         25            0
+sway1  74.7315   7.313      23.75            8
+xpln1   73.665   7.539         25            8
+sway2   72.849  7.7925     20.625         4.35
+xpln2  73.7125  7.5415         25         4.35
+top    64.4585  15.244     26.875         1000
+
+                MRE-    ACC+    PRED40+
+--------------  ------  ------  ---------
+all to all      =       =       =
+all to sway1    ≠       ≠       ≠
+all to sway2    ≠       ≠       ≠
+sway1 to sway2  ≠       ≠       ≠
+sway1 to xpln1  ≠       ≠       ≠
+sway2 to xpln2  ≠       ≠       ≠
+sway1 to top    ≠       ≠       ≠
+sway2 to top    ≠       ≠       ≠
+---------------End of Run: 20 , Budget: 5  -------------
+
+---------------Start of Run: 20 , Budget: 10  -------------
+
+          MRE-    ACC+    PRED40+    Avg evals
+-----  -------  ------  ---------  -----------
+all    75.0365   7.137         25            0
+sway1   73.518  7.4925      18.75            8
+xpln1   73.824   7.518         25            8
+sway2  74.8585   7.133     23.125          1.6
+xpln2   75.057  7.1665     25.625          1.6
+top     65.408  11.534         25         1000
+
+                MRE-    ACC+    PRED40+
+--------------  ------  ------  ---------
+all to all      =       =       =
+all to sway1    ≠       ≠       ≠
+all to sway2    ≠       ≠       ≠
+sway1 to sway2  ≠       ≠       ≠
+sway1 to xpln1  ≠       ≠       ≠
+sway2 to xpln2  ≠       ≠       ≠
+sway1 to top    ≠       ≠       ≠
+sway2 to top    ≠       ≠       ≠
+---------------End of Run: 20 , Budget: 10  -------------
+
+---------------Start of Run: 20 , Budget: 20  -------------
+
+          MRE-     ACC+    PRED40+    Avg evals
+-----  -------  -------  ---------  -----------
+all      75.01    7.132         25            0
+sway1  73.5555   7.5205     23.125            8
+xpln1  73.6635   7.5595         25            8
+sway2   76.131    6.794      26.25         1.15
+xpln2   76.357   6.7935      26.25         1.15
+top     67.307  10.2015         25         1000
+
+                MRE-    ACC+    PRED40+
+--------------  ------  ------  ---------
+all to all      =       =       =
+all to sway1    ≠       ≠       ≠
+all to sway2    ≠       ≠       ≠
+sway1 to sway2  ≠       ≠       ≠
+sway1 to xpln1  ≠       ≠       ≠
+sway2 to xpln2  ≠       ≠       ≠
+sway1 to top    ≠       ≠       ≠
+sway2 to top    ≠       ≠       ≠
+---------------End of Run: 20 , Budget: 20  -------------
+
+---------------Start of Run: 20 , Budget: 1  -------------
+
+          MRE-     ACC+    PRED40+    Avg evals
+-----  -------  -------  ---------  -----------
+all    75.0511  7.14778         25            0
+sway1  70.6122  9.05889    22.2222            8
+xpln1    74.61  7.25556         25            8
+sway2  71.2622  22.8122    31.9444      1.77778
+xpln2  75.4222     7.04         25      1.77778
+top    64.7122  25.6511    31.9444         1000
+
+                MRE-    ACC+    PRED40+
+--------------  ------  ------  ---------
+all to all      =       =       =
+all to sway1    ≠       ≠       ≠
+all to sway2    ≠       ≠       ≠
+sway1 to sway2  ≠       ≠       ≠
+sway1 to xpln1  ≠       ≠       ≠
+sway2 to xpln2  ≠       ≠       ≠
+sway1 to top    ≠       ≠       ≠
+sway2 to top    ≠       ≠       ≠
+---------------End of Run: 20 , Budget: 1  -------------

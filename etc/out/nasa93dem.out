@@ -1,0 +1,138 @@
+---------------Start of Run: 20 , Budget: 2  -------------
+
+         Kloc+    Effort-    Defects-    Months-    Avg evals
+-----  -------  ---------  ----------  ---------  -----------
+all       47.5        252        2007       21.4            0
+sway1    77.37     384.55      3748.5     19.285            5
+xpln1   47.455     224.06      2067.7      18.68            5
+sway2   13.755     105.66         775     15.565         1.95
+xpln2    22.49      125.2      1157.1      17.96         1.95
+top        0.9        8.4          28        4.9           93
+
+                Kloc+    Effort-    Defects-    Months-
+--------------  -------  ---------  ----------  ---------
+all to all      =        =          =           =
+all to sway1    ≠        ≠          ≠           ≠
+all to sway2    ≠        ≠          ≠           ≠
+sway1 to sway2  ≠        ≠          ≠           ≠
+sway1 to xpln1  ≠        ≠          ≠           ≠
+sway2 to xpln2  ≠        ≠          ≠           ≠
+sway1 to top    ≠        ≠          ≠           ≠
+sway2 to top    ≠        ≠          ≠           ≠
+---------------End of Run: 20 , Budget: 2  -------------
+
+---------------Start of Run: 20 , Budget: 4  -------------
+
+         Kloc+    Effort-    Defects-    Months-    Avg evals
+-----  -------  ---------  ----------  ---------  -----------
+all       47.5        252        2007       21.4            0
+sway1   24.485      99.65      1012.9     15.045            5
+xpln1   22.335        113      994.95     15.405            5
+sway2    32.53     120.63      1451.2     17.865          0.8
+xpln2   31.115     129.82     1338.95     17.795          0.8
+top        2.2        8.4          69        6.6           93
+
+                Kloc+    Effort-    Defects-    Months-
+--------------  -------  ---------  ----------  ---------
+all to all      =        =          =           =
+all to sway1    ≠        ≠          ≠           ≠
+all to sway2    ≠        ≠          ≠           ≠
+sway1 to sway2  ≠        ≠          ≠           ≠
+sway1 to xpln1  ≠        ≠          ≠           ≠
+sway2 to xpln2  ≠        ≠          ≠           ≠
+sway1 to top    ≠        ≠          ≠           ≠
+sway2 to top    ≠        ≠          ≠           ≠
+---------------End of Run: 20 , Budget: 4  -------------
+
+
+---------------Start of Run: 20 , Budget: 6  -------------
+
+         Kloc+    Effort-    Defects-    Months-    Avg evals
+-----  -------  ---------  ----------  ---------  -----------
+all       47.5        252        2007       21.4            0
+sway1   31.125     123.52     1329.35      16.12            4
+xpln1   33.895     128.08      1346.1      16.28            4
+sway2   45.205     164.86      1919.5      19.31            0
+xpln2     33.5     117.97     1247.05      17.99            0
+top        3.5       10.8         109        7.8           93
+
+                Kloc+    Effort-    Defects-    Months-
+--------------  -------  ---------  ----------  ---------
+all to all      =        =          =           =
+all to sway1    ≠        ≠          ≠           ≠
+all to sway2    ≠        ≠          ≠           ≠
+sway1 to sway2  ≠        ≠          ≠           ≠
+sway1 to xpln1  ≠        ≠          ≠           ≠
+sway2 to xpln2  ≠        ≠          ≠           ≠
+sway1 to top    ≠        ≠          ≠           ≠
+sway2 to top    ≠        ≠          ≠           ≠
+---------------End of Run: 20 , Budget: 6  -------------
+
+---------------Start of Run: 20 , Budget: 8  -------------
+
+         Kloc+    Effort-    Defects-    Months-    Avg evals
+-----  -------  ---------  ----------  ---------  -----------
+all       47.5        252        2007       21.4            0
+sway1    34.08     162.03        1501     17.075            4
+xpln1   29.955     106.98     1210.55      15.47            4
+sway2   44.855        164      1614.6      18.28            0
+xpln2    30.91      116.4     1214.55      18.05            0
+top        5.5         18         172        9.1           93
+
+                Kloc+    Effort-    Defects-    Months-
+--------------  -------  ---------  ----------  ---------
+all to all      =        =          =           =
+all to sway1    ≠        ≠          ≠           ≠
+all to sway2    ≠        ≠          ≠           ≠
+sway1 to sway2  ≠        ≠          ≠           ≠
+sway1 to xpln1  ≠        ≠          ≠           ≠
+sway2 to xpln2  ≠        ≠          ≠           ≠
+sway1 to top    ≠        ≠          ≠           ≠
+sway2 to top    ≠        ≠          ≠           ≠
+---------------End of Run: 20 , Budget: 8  -------------
+
+---------------Start of Run: 20 , Budget: 10  -------------
+
+         Kloc+    Effort-    Defects-    Months-    Avg evals
+-----  -------  ---------  ----------  ---------  -----------
+all       47.5        252        2007       21.4            0
+sway1    46.34     180.24      1776.1       17.7            4
+xpln1    32.99     141.65     1346.65     16.955            4
+sway2   42.135     138.55      1438.8     18.735            0
+xpln2    29.42      121.2        1142     17.835            0
+top          6         24         188        9.9           93
+
+                Kloc+    Effort-    Defects-    Months-
+--------------  -------  ---------  ----------  ---------
+all to all      =        =          =           =
+all to sway1    ≠        ≠          ≠           ≠
+all to sway2    ≠        ≠          ≠           ≠
+sway1 to sway2  ≠        ≠          ≠           ≠
+sway1 to xpln1  ≠        ≠          ≠           ≠
+sway2 to xpln2  ≠        ≠          ≠           ≠
+sway1 to top    ≠        ≠          ≠           ≠
+sway2 to top    ≠        ≠          ≠           ≠
+---------------End of Run: 20 , Budget: 10  -------------
+
+---------------Start of Run: 20 , Best: 1  -------------
+
+         Kloc+    Effort-    Defects-    Months-    Avg evals
+-----  -------  ---------  ----------  ---------  -----------
+all       47.5        252        2007       21.4            0
+sway1     8.52      38.88      379.35     11.055            5
+xpln1   35.475     256.63      1599.5       19.7            5
+sway2     6.22      43.44      352.45      11.85            2
+xpln2   33.045     227.45      1620.2     20.355            2
+top        0.9        8.4          28        4.9           93
+
+                Kloc+    Effort-    Defects-    Months-
+--------------  -------  ---------  ----------  ---------
+all to all      =        =          =           =
+all to sway1    ≠        ≠          ≠           ≠
+all to sway2    ≠        ≠          ≠           ≠
+sway1 to sway2  ≠        ≠          ≠           ≠
+sway1 to xpln1  ≠        ≠          ≠           ≠
+sway2 to xpln2  ≠        ≠          ≠           ≠
+sway1 to top    ≠        ≠          ≠           ≠
+sway2 to top    ≠        ≠          ≠           ≠
+---------------End of Run: 20 , Best: 1  -------------

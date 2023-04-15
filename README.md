@@ -1,3 +1,4 @@
+
 # CSC-791-Project: A Multi-objective Semi-supervised Explanation System
 
 
@@ -12,6 +13,23 @@ Prerequisites:
 * [Python](https://www.python.org/downloads/) >= 3.9
 * [pip](https://linuxize.com/post/how-to-install-pip-on-ubuntu-20.04/) >= 22.2.9
 
+### How to Run:
+
+ - Install the requirements: `pip install -r requirements.txt`
+ - Change directory to `src`
+ - Run  `python main.py`  to generate tables for the  `auto2.csv`  file
+ - Run `python main.py --help`  to view possible configuration values
+
+### Notes:
+
+ 1. Source codes are present in [src](https://github.com/setu1421/CSC-791-Project/tree/main/src) folder.
+ 2. Datasets are present in [etc/data](https://github.com/setu1421/CSC-791-Project/tree/main/etc/data) folder
+ 3. Outputs for each dataset and different budgets are present in [etc/out](https://github.com/setu1421/CSC-791-Project/tree/main/etc/out) folder
+
+## Output:
+The output of running `sway1` and `sway2` method for `auto2.csv` file:
+
+
 
 
 ## License:
@@ -21,4 +39,4 @@ This project is licensed under the terms of the MIT license. Please check [LICEN
 ## Authors:
  - Setu Kumar Basak (sbasak4@ncsu.edu)
 ## How to Contribute:
- Please check [here](https://github.com/setu1421/CSC-791-Project/blob/main/CONTRIBUTING.md).
+ Please check [here](https://github.com/setu1421/CSC-791-Project/blob/main/CONTRIBUTING.md). 

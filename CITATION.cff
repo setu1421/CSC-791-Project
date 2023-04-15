@@ -1,0 +1,25 @@
+# This CITATION.cff file was generated with cffinit.
+# Visit https://bit.ly/cffinit to generate yours today!
+
+cff-version: 1.2.0
+title: Automated SE
+message: >-
+  If you use this software, please cite it using the
+  metadata from this file.
+type: software
+authors:
+  - given-names: Setu Kumar
+    family-names: Basak
+    email: setu677@gmail.com
+identifiers:
+  - type: url
+    value: 'https://zenodo.org/badge/latestdoi/403367995'
+repository-code: 'https://github.com/setu1421/CSC-791'
+url: 'https://github.com/setu1421/CSC-791'
+repository-artifact: 'https://zenodo.org/badge/latestdoi/403367995'
+keywords:
+  - Automated Software Engineering
+license: MIT
+commit: ecb0c2582bae435ea7c2ab03058cfd48e467af00
+version: v0.1
+date-released: '2023-01-19'

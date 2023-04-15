@@ -1,0 +1,92 @@
+---------------Start of Run: 20 , Budget: 5  -------------
+
+         PSNR-    Energy-    Avg evals
+-----  -------  ---------  -----------
+all    45.6484    1265.03            0
+sway1  44.2605    1294.18            9
+xpln1  44.3684    1273.42            9
+sway2  43.3584    1223.66      2.36842
+xpln2  45.1942    1102.72      2.36842
+top    26.8784    518.795         1000
+
+                PSNR-    Energy-
+--------------  -------  ---------
+all to all      =        =
+all to sway1    ≠        ≠
+all to sway2    ≠        ≠
+sway1 to sway2  ≠        ≠
+sway1 to xpln1  ≠        ≠
+sway2 to xpln2  ≠        ≠
+sway1 to top    ≠        ≠
+sway2 to top    ≠        ≠
+---------------End of Run: 20 , Budget: 5  -------------
+
+---------------Start of Run: 20 , Budget: 10  -------------
+
+         PSNR-    Energy-    Avg evals
+-----  -------  ---------  -----------
+all    45.7311    1251.16            0
+sway1  42.7763    968.921            9
+xpln1  43.9953    1267.86            9
+sway2  42.8037    946.257      2.05263
+xpln2  45.1147    1188.08      2.05263
+top    27.9484    533.058         1000
+
+                PSNR-    Energy-
+--------------  -------  ---------
+all to all      =        =
+all to sway1    ≠        ≠
+all to sway2    ≠        ≠
+sway1 to sway2  ≠        ≠
+sway1 to xpln1  ≠        ≠
+sway2 to xpln2  ≠        ≠
+sway1 to top    ≠        ≠
+sway2 to top    ≠        ≠
+---------------End of Run: 20 , Budget: 10  -------------
+
+---------------Start of Run: 20 , Budget: 20  -------------
+
+         PSNR-    Energy-    Avg evals
+-----  -------  ---------  -----------
+all     45.838    1264.32            0
+sway1  42.5755    1444.25            9
+xpln1  45.1075    1568.97            9
+sway2   43.169    966.147          2.3
+xpln2   45.417    1093.71          2.3
+top    29.5875    647.273         1000
+
+                PSNR-    Energy-
+--------------  -------  ---------
+all to all      =        =
+all to sway1    ≠        ≠
+all to sway2    ≠        ≠
+sway1 to sway2  ≠        ≠
+sway1 to xpln1  ≠        ≠
+sway2 to xpln2  ≠        ≠
+sway1 to top    ≠        ≠
+sway2 to top    ≠        ≠
+---------------End of Run: 20 , Budget: 20  -------------
+
+
+---------------Start of Run: 20 , Best: 1  -------------
+
+         PSNR-    Energy-    Avg evals
+-----  -------  ---------  -----------
+all    45.7993    1244.89            0
+sway1  28.2107    420.545            9
+xpln1  45.4007     1524.1            9
+sway2  29.4747    397.698            2
+xpln2  45.1527    1101.24            2
+top     22.404    342.968         1000
+
+                PSNR-    Energy-
+--------------  -------  ---------
+all to all      =        =
+all to sway1    ≠        ≠
+all to sway2    ≠        ≠
+sway1 to sway2  ≠        ≠
+sway1 to xpln1  ≠        ≠
+sway2 to xpln2  ≠        ≠
+sway1 to top    ≠        ≠
+sway2 to top    ≠        ≠
+---------------End of Run: 20 , Best: 1  -------------

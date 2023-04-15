@@ -43,3 +43,51 @@ sway2 to xpln2  ≠                    ≠
 sway1 to top    ≠                    ≠
 sway2 to top    ≠                    ≠
 ---------------End of Run: 20 , Budget: 10  -------------
+
+
+---------------Start of Run: 20 , Budget: 20  -------------
+
+         NUMBERITERATIONS-    TIMETOSOLUTION-    Avg evals
+-----  -------------------  -----------------  -----------
+all                    6.8            135.603            0
+sway1                 5.55            106.098           10
+xpln1                 5.35            113.677           10
+sway2                 5.45            112.968          3.1
+xpln2                  5.4            110.084          3.1
+top                      4             83.175         1000
+
+                NUMBERITERATIONS-    TIMETOSOLUTION-
+--------------  -------------------  -----------------
+all to all      =                    =
+all to sway1    ≠                    ≠
+all to sway2    ≠                    ≠
+sway1 to sway2  ≠                    ≠
+sway1 to xpln1  ≠                    ≠
+sway2 to xpln2  ≠                    ≠
+sway1 to top    ≠                    ≠
+sway2 to top    ≠                    ≠
+---------------End of Run: 20 , Budget: 20  -------------
+
+
+---------------Start of Run: 20 , Best: 1  -------------
+
+         NUMBERITERATIONS-    TIMETOSOLUTION-    Avg evals
+-----  -------------------  -----------------  -----------
+all                6.81818            135.282            0
+sway1              3.81818            84.6536           10
+xpln1              6.45455            130.582           10
+sway2              4.54545            68.5527      3.27273
+xpln2              6.63636            134.377      3.27273
+top                3.54545            55.8345         1000
+
+                NUMBERITERATIONS-    TIMETOSOLUTION-
+--------------  -------------------  -----------------
+all to all      =                    =
+all to sway1    ≠                    ≠
+all to sway2    ≠                    ≠
+sway1 to sway2  ≠                    ≠
+sway1 to xpln1  ≠                    ≠
+sway2 to xpln2  ≠                    ≠
+sway1 to top    ≠                    ≠
+sway2 to top    ≠                    ≠
+---------------End of Run: 20 , Best: 1  -------------

@@ -289,7 +289,7 @@ class Data:
         return sorted_cluster_data[0]['row']
 
     # min_pts should be the budget
-    def sway_dbscan(self, eps= 0.25, min_pts = 5):
+    def sway_dbscan(self, eps= 0.2, min_pts = 5):
         min_pts = options["budget"]
         self.rows = many(self.rows, 1000)
         clusters, noise = self.dbscan(self.rows, eps, min_pts)

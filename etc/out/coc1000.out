@@ -81,7 +81,7 @@ top       1942        1        2        3      31323         1000
 
                 LOC+    AEXP-    PLEX-    RISK-    EFFORT-
 --------------  ------  -------  -------  -------  ---------
-all to all      ≠       =        =        =        ≠
+all to all      =       =        =        =        =
 all to sway1    ≠       ≠        ≠        ≠        ≠
 all to sway2    ≠       ≠        ≠        ≠        ≠
 sway1 to sway2  ≠       ≠        ≠        ≠        ≠

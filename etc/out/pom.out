@@ -84,7 +84,7 @@ top    115.945       0.990909          0         1000
 all to all      =        =              =
 all to sway1    ≠        ≠              ≠
 all to sway2    ≠        ≠              ≠
-sway1 to sway2  ≠        ≠              ≠
+sway1 to sway2  ≠        =              =
 sway1 to xpln1  ≠        ≠              ≠
 sway2 to xpln2  ≠        ≠              ≠
 sway1 to top    ≠        ≠              ≠

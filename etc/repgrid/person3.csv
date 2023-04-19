@@ -1,0 +1,23 @@
+    local _ = " "
+    return {
+     domain="dissementian platforms",
+     cols={   {'ChildrenMovie', 2, 5, 2, 5, 5, 5, 3, 4, 5, 1, 'AdultMovie'},
+               {'ClassicMovie', 4, 1, 4, 5, 4, 4, 3, 3, 1, 2, 'ThrillerMovie'},
+                 {'AnimeMovie', 5, 5, 5, 5, 5, 5, 3, 4, 4, 1, 'NonAnimeMovie'},
+                {'ComedyMovie', 1, 4, 2, 4, 4, 3, 3, 2, 3, 4, 'HorrorMovie'},
+                   {'WarMovie', 3, 3, 4, 4, 4, 3, 1, 2, 3, 3, 'RomanticMovie'},
+                 {'ShortMovie', 2, 4, 2, 5, 1, 4, 5, 2, 4, 3, 'LongMovie'},
+             {'WatchOnceMovie', 4, 2, 2, 5, 2, 3, 2, 1, 4, 2, 'WatchMultipleMovie'},
+                   {'BadMovie', 4, 2, 5, 3, 3, 3, 2, 2, 4, 4, 'GoodMovie'},
+          {'NonExpensiveMovie', 5, 3, 3, 2, 2, 4, 5, 4, 4, 3, 'ExpensiveMovie'}, 
+           {'EducationalMovie', 1, 5, 2, 1, 2, 5, 5, 5, 5, 4, 'EntertainerMovie'}},
+    rows={                    { _, _, _, _, _, _, _, _, _, 'IceAge'},
+                              { _, _, _, _, _, _, _, _, 'Titanic'},
+                              { _, _, _, _, _, _, _, 'KingsMan'},
+                              { _, _, _, _, _, _, 'LordOfTheRings'},
+                              { _, _, _, _, _,  'SocialNetwork'},
+                              { _, _, _, _,  'AmericanSniper'},
+                              { _, _, _,  'Parasite'},
+                              { _, _,  'BicycleThieves'},
+                              { _, 'Sully'},
+                              {'RushHour'}} }

@@ -1,0 +1,60 @@
+6
+|..56
+|..|..45
+|..|..|..AmericanSniper
+|..|..|..Sully
+|..|..59
+|..|..|..RushHour
+|..|..|..53
+|..|..|..|..Parasite
+|..|..|..|..BicycleThieves
+|..48
+|..|..37
+|..|..|..LordOfTheRings
+|..|..|..SocialNetwork
+|..|..50
+|..|..|..IceAge
+|..|..|..42
+|..|..|..|..KingsMan
+|..|..|..|..Titanic
+68
+|..52
+|..|..24
+|..|..|..WarMovie:RomanticMovie
+|..|..|..BadMovie:GoodMovie
+|..|..63
+|..|..|..AnimeMovie:NonAnimeMovie
+|..|..|..43
+|..|..|..|..WatchOnceMovie:WatchMultipleMovie
+|..|..|..|..ClassicMovie:ThrillerMovie
+|..54
+|..|..44
+|..|..|..EducationalMovie:EntertainerMovie
+|..|..|..NonExpensiveMovie:ExpensiveMovie
+|..|..52
+|..|..|..ChildrenMovie:AdultMovie
+|..|..|..37
+|..|..|..|..ComedyMovie:HorrorMovie
+|..|..|..|..ShortMovie:LongMovie
+
+A RushHour
+B Sully
+C BicycleThieves
+D Parasite
+E AmericanSniper
+F SocialNetwork
+G LordOfTheRings
+H KingsMan
+I Titanic
+J IceAge
+
+E                         G            
+                                       
+                                       
+                                       
+              F H                      
+            B                          
+              I                        
+    D         J                        
+                                       
+            A    
